@@ -2,7 +2,6 @@ apply plugin: 'kotlin'
 apply plugin: 'org.springframework.boot'
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.cloud:spring-cloud-starter-feign'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile("org.jetbrains.kotlin:kotlin-stdlib")
     compile("org.jetbrains.kotlin:kotlin-reflect")
