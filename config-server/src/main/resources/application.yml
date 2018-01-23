@@ -1,11 +1,15 @@
 spring:
- cloud:
-  config:
-   server:
-    git:
-     uri: http://github.com/test.git
-     username: ${REPO_USER:test}
-     password: ${REPO_PASS:test}
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+  profiles:
+     active: native
 
 server:
- port: ${PORT:8890}
+  port: 8888
+
+security:
+  user:
+    password: ${CONFIG_SERVICE_PASSWORD}
