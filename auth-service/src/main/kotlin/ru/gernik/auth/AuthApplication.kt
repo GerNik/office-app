@@ -1,11 +1,11 @@
 package ru.gernik.auth
 
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
-open class AuthApplication
+class AuthApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(AuthApplication::class.java, *args)
+    runApplication<AuthApplication>(*args)
 }
