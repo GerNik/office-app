@@ -1,0 +1,21 @@
+version: '1'
+services:
+  config-server:
+    build:  config-server
+    ports:
+      - 8888: 8888
+
+  gateway:
+    build:  gateway
+    ports:
+      - 5000: 5000
+
+  auth-service:
+    build:  auth-service
+    ports:
+      - 6000: 6000
+
+  app:
+    build:  app
+    ports:
+      - 7000: 7000
