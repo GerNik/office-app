@@ -1,5 +1,6 @@
-apply plugin: 'kotlin'
+apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
+mainClassName = 'ru.gernik.app.office.OfficeApplicationKt'
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'

@@ -1,11 +1,11 @@
 package ru.gernik.app.office
 
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
-open class OfficeApplication
+class OfficeApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(OfficeApplication::class.java, *args)
+    runApplication<OfficeApplication>(*args)
 }
