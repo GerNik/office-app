@@ -1,5 +1,6 @@
 rootProject.name = 'office-app'
-include 'app'
-include 'config-server'
-include 'gateway'
-include 'auth-service'
+include 'app',
+        'config-server',
+        'gateway',
+        'auth-service',
+        'eureka'
