@@ -2,11 +2,17 @@ apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
 mainClassName = 'ru.gernik.auth.AuthApplicationKt'
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     compile 'org.jetbrains.kotlin:kotlin-stdlib'
     compile 'org.jetbrains.kotlin:kotlin-reflect'
     compile 'com.fasterxml.jackson.module:jackson-module-kotlin'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.mockito:mockito-core'
+    testCompile 'cglib:cglib-nodep:3.2.5'
+    testCompile 'org.testcontainers:testcontainers'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine'
 }

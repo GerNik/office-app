@@ -18,9 +18,9 @@ repositories {
     maven { url "https://repo.spring.io/milestone" }
 }
 
-ext{
+ext {
     springCloudVersion = 'Finchley.M9'
-    kotlinProjects = [project(':app'),]
+    kotlinProjects = [project(':app'), project(':auth-service')]
 }
 
 allprojects {
@@ -67,7 +67,11 @@ configure(kotlinProjects) {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'kotlin'
     dependencyManagement {
-
-
+        dependencies {
+            dependency 'org.testcontainers:testcontainers:1.2.1'
+            dependency 'cglib:cglib-nodep:3.2.5'
+            dependency 'org.mockito:mockito-core:2.8.9'
+            dependency 'org.junit.jupiter:junit-jupiter-engine:5.1.1'
+        }
     }
 }
