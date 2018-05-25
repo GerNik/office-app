@@ -5,4 +5,7 @@ import org.springframework.stereotype.Repository
 import ru.gernik.auth.domain.User
 
 @Repository
-interface UserRepository : CrudRepository<User, String>
+interface UserRepository : CrudRepository<User, String>{
+
+    fun findByLogin(login : String) : User
+}

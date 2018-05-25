@@ -15,5 +15,6 @@ class User(
         val surname: String,
         val middleName: String?,
         val email: String,
-        val phoneNumber: String?
+        val phoneNumber: String?,
+        val roles: List<Role>
 )
