@@ -8,8 +8,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @Configuration
 @EnableResourceServer
 class ResourceServerConfig : ResourceServerConfigurerAdapter() {
-    override fun configure(http: HttpSecurity?) {
-        http!!.authorizeRequests().anyRequest().authenticated()
-                .and().csrf().disable()
+    override fun configure(http: HttpSecurity) {
+        http.authorizeRequests()
+                .anyRequest().authenticated()
+                .and()
+                .csrf().disable()
     }
 }

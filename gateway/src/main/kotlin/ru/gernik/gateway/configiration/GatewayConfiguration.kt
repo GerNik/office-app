@@ -2,13 +2,19 @@ package ru.gernik.gateway.configiration
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.web.reactive.DispatcherHandler
+import org.springframework.http.codec.ServerCodecConfigurer
+import org.springframework.http.codec.support.DefaultServerCodecConfigurer
 
 @Configuration
-class GatewayConfiguration{
+class GatewayConfiguration {
+
+//    @Bean
+//    fun dispatcherHandler(): DispatcherHandler {
+//        return DispatcherHandler()
+//    }
 
     @Bean
-    fun dispatcherHandler() : DispatcherHandler{
-        return DispatcherHandler()
+    fun serverCodecConfigurer(): ServerCodecConfigurer {
+        return DefaultServerCodecConfigurer()
     }
 }

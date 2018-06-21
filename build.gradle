@@ -19,7 +19,7 @@ repositories {
 }
 
 ext {
-    springCloudVersion = 'Finchley.M9'
+    springCloudVersion = 'Finchley.RELEASE'
     kotlinProjects = [project(':app'), project(':auth-service')]
 }
 

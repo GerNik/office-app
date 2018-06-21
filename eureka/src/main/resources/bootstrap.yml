@@ -3,5 +3,16 @@ spring:
     name: eureka
   cloud:
     config:
-      uri: http://config:8888
+      uri: http://localhost:8888
       fail-fast: true
+server:
+  port: 8761
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
