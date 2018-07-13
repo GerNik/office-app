@@ -5,8 +5,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
 class CustomUserDetails(user: User) : UserDetails {
-    private var username: String
-    private var password: String
+    private var username: String = user.login
+    private var password: String = user.password
     private var authorities: Collection<GrantedAuthority>
 
     override fun isEnabled(): Boolean = true
@@ -24,9 +24,6 @@ class CustomUserDetails(user: User) : UserDetails {
     override fun getAuthorities(): Collection<GrantedAuthority> = this.authorities
 
     init {
-        this.username = user.login
-        this.password = user.password
-
         val auth : ArrayList<GrantedAuthority> = ArrayList()
         for (role in user.roles)
             auth.add(SimpleGrantedAuthority(role.name))

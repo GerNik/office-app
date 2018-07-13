@@ -5,9 +5,9 @@ import org.springframework.data.mongodb.core.index.Indexed
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document
-class User(
+data class User(
         @Id
-        val id: String,
+        val id: String?,
         @Indexed(unique = true)
         val login: String,
         val password: String,

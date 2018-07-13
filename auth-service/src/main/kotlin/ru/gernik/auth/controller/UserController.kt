@@ -1,9 +1,7 @@
 package ru.gernik.auth.controller
 
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.web.bind.annotation.*
 import ru.gernik.auth.domain.User
 import ru.gernik.auth.service.UserService
 import java.security.Principal
@@ -14,10 +12,11 @@ const val USERS = "users"
 @RestController
 class UserController {
 
+    @Autowired
     lateinit var userService: UserService
 
     @PostMapping
-    fun saveUser(user: User): User = userService.saveUser(user)
+    fun saveUser(@RequestBody user: User): User = userService.saveUser(user)
 
     @GetMapping("/current")
     fun getUserInfo(principal: Principal) : Principal = principal
