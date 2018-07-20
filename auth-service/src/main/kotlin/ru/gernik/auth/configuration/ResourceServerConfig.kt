@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 class ResourceServerConfig : ResourceServerConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         http.authorizeRequests()
+                .antMatchers("/users").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()
