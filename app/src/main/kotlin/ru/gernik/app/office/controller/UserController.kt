@@ -1,19 +1,22 @@
 package ru.gernik.app.office.controller
 
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import ru.gernik.app.office.controller.dto.User
 
 const val USERS = "users"
-const val OFFICE = "office"
+const val WEBSTORE = "webstore"
 
-@RequestMapping(OFFICE)
+@RequestMapping(WEBSTORE)
 @RestController
 class UserController {
 
     @GetMapping(USERS)
-    fun getUser(): User{
+    fun getUser(): User {
         return User("Ivan", "Ivanov")
+    }
+
+    @PostMapping
+    fun addUser(@RequestBody user: User): User {
+        return user
     }
 }

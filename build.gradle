@@ -68,6 +68,7 @@ configure(kotlinProjects) {
     apply plugin: 'kotlin'
     dependencyManagement {
         dependencies {
+            dependency 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.6'
             dependency 'org.testcontainers:testcontainers:1.2.1'
             dependency 'cglib:cglib-nodep:3.2.5'
             dependency 'org.mockito:mockito-core:2.8.9'
