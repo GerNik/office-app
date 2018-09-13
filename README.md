@@ -1,4 +1,8 @@
-# webstore-app
+# Online store backend app
+
+**Sample of backend app simple online-store (The application is under development)**
+
+This is a concept application using Microservice Architecture Pattern, Kotlin, Spring Boot, Spring Cloud and Docker.
 
 #### Development mode
 
