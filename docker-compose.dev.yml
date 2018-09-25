@@ -1,29 +1,37 @@
 version: '3.3'
 services:
   config-server:
+    image: config-server:latest
     build:  config-server
     ports:
       - 8888:8888
 
   eureka:
+    image: eureka:latest
     build:  eureka
+    ports:
+      - 8761:8761
 
   gateway:
+    image: gateway:latest
     build:  gateway
     ports:
       - 5000:5000
 
   auth-mongodb:
-        build: mongodb
-        ports:
-          - 25000:27017
+    image: auth-mongodb:latest
+    build: mongodb
+    ports:
+      - 25000:27017
 
   auth-service:
+    image: auth-service:latest
     build:  auth-service
     ports:
       - 6000:6000
 
   app:
+    image: app:latest
     build:  app
     ports:
       - 7000:7000
