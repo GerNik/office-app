@@ -2,10 +2,11 @@ package ru.gernik.auth.repository
 
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
-import ru.gernik.auth.domain.User
+import ru.gernik.auth.repository.entity.UserEntity
+import java.util.*
 
 @Repository
-interface UserRepository : CrudRepository<User, String>{
+interface UserRepository : CrudRepository<UserEntity, String> {
 
-    fun findByLogin(login : String) : User
+    fun findByLogin(login: String): Optional<UserEntity>
 }

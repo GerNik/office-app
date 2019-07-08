@@ -1,14 +1,7 @@
 package ru.gernik.auth.domain
 
-import org.springframework.data.annotation.Id
-import org.springframework.data.mongodb.core.index.Indexed
-import org.springframework.data.mongodb.core.mapping.Document
-
-@Document
-data class User(
-        @Id
+data class UserDTO(
         val id: String?,
-        @Indexed(unique = true)
         val login: String,
         val password: String,
         val name: String,
