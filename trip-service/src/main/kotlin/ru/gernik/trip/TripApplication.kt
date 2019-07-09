@@ -1,11 +1,11 @@
-package ru.gernik.route
+package ru.gernik.trip
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class RouteApplication
+class TripApplication
 
 fun main(args: Array<String>) {
-    runApplication<RouteApplication>(*args)
+    runApplication<TripApplication>(*args)
 }

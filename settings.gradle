@@ -3,4 +3,5 @@ include 'route-service',
         'config-server',
         'gateway',
         'auth-service',
-        'eureka'
+        'eureka',
+        'trip-service'
