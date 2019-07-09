@@ -1,4 +1,4 @@
-package ru.gernik.app.office
+package ru.gernik.route
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

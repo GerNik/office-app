@@ -1,5 +1,5 @@
 rootProject.name = 'online-store-backend'
-include 'app',
+include 'route-service',
         'config-server',
         'gateway',
         'auth-service',

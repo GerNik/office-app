@@ -20,7 +20,10 @@ repositories {
 
 ext {
     springCloudVersion = 'Greenwich.RELEASE'
-    kotlinProjects = [project(':app'), project(':auth-service')]
+    kotlinProjects = [
+            project(':route-service'), 
+            project(':auth-service')
+    ]
 }
 
 allprojects {
