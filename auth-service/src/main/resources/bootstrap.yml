@@ -2,18 +2,3 @@ spring:
   application:
     name: auth-service
     description: "Auth service"
-#  cloud:
-#    config:
-#      uri: http://config-server:8888
-
-  data:
-    mongodb:
-      host: localhost
-      database: users
-      port: 27017
-server:
-  port: 8091
-
-swagger:
-  context:
-    root: ""

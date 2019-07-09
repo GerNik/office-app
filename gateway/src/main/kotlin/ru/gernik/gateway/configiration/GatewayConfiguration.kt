@@ -8,11 +8,6 @@ import org.springframework.http.codec.support.DefaultServerCodecConfigurer
 @Configuration
 class GatewayConfiguration {
 
-//    @Bean
-//    fun dispatcherHandler(): DispatcherHandler {
-//        return DispatcherHandler()
-//    }
-
     @Bean
     fun serverCodecConfigurer(): ServerCodecConfigurer {
         return DefaultServerCodecConfigurer()
