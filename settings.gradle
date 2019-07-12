@@ -1,4 +1,4 @@
-rootProject.name = 'online-store-backend'
+rootProject.name = 'trips-app-backend'
 include 'route-service',
         'config-server',
         'gateway',

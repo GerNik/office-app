@@ -1,6 +1,6 @@
-# Online store backend app
+# Trips app backend
 
-**Sample of backend app simple online-store (The application is under development)**
+**(The application is under development)**
 
 This is a concept application using Microservice Architecture Pattern, Kotlin, Spring Boot, Spring Cloud and Docker.
 
